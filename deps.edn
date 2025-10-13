@@ -1,0 +1,10 @@
+{:paths ["src"]
+
+ :deps {org.clojure/clojure {:mvn/version "1.11.2"}
+
+        leiningen/leiningen {:mvn/version "2.11.2"}
+
+        com.github.clojure-lsp/clojure-lsp {:mvn/version "2025.08.25-14.21.46"}}
+
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo/"}}}
