@@ -12,7 +12,7 @@
        (map :var-usages)
        flatten
        (filter #(and (:from %) (:from-var %) (:to %) (:name %)))
-       (remove #(.startsWith (name (:to %)) "clojure."))))
+       (filter #(= (name (:name %)) "read-raw"))))
 
 (defn external-vars-definitions [dump-result]
   (->> (var-usages dump-result)
