@@ -27,8 +27,7 @@
       (assoc :project-root workspace)))
 
 (defn- -main
-  [& args]
-  (let [params (apply hash-map args)
-        workspace (get params "-workspace")
-        result (external-vars-definitions (dump-result (.getAbsolutePath (File. workspace))))]
+  [& _]
+  (let [workspace (System/getProperty "user.dir")
+        result (external-vars-definitions (dump-result workspace))]
     (prn result)))
